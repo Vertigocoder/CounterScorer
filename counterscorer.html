@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CounterScorer</title>
+    <style>
+        .logo {
+            text-align: center;
+            font-size: 2.5em;
+            padding: 15px;
+            color: rgb(230, 243, 243);
+            background-color: rgb(235, 26, 26);
+            position: fixed;
+            width: 95.5vw;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            padding: 100px;
+        }
+
+        .container div {
+            padding: 10px;
+            border: none;
+            
+        }
+
+        label {
+            font-size: 3em;
+        }
+
+        p {
+            font-size: 13em;
+            text-align: center;
+            margin: 30px;
+            padding: 40px;
+            padding-left: 100px;
+            padding-right: 100px;
+            border: solid;
+        }
+
+        h3 {
+            font-size: 70px;
+        }
+
+        button {
+            font-size: 2.3em;
+            padding: 10px;
+            margin: 5px;
+            width: 5vw;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+
+        let counthome = 0
+        let countaway = 0
+
+        function tambahhome()
+        {
+            let home = document.getElementById("home")
+            counthome++ 
+            home.textContent = counthome
+        }
+
+        function kuranghome()
+        {
+            let home = document.getElementById("home")
+            counthome--
+            home.textContent = counthome
+        }
+
+        function tambahaway()
+        {
+            let home = document.getElementById("away")
+            countaway++
+            home.textContent = countaway
+        }
+
+        function kurangaway()
+        {
+            let home = document.getElementById("away")
+            countaway--
+            home.textContent = countaway
+        }
+    </script>
+</head>
+<body>
+    <div class="logo">CounterScorer</div>
+
+    <div class="container">
+        <div class="home">
+            <label>HOME</label>
+            <p id="home">0</p>
+            <button onclick="kuranghome()">-</button>
+            <button onclick="tambahhome()">+</button>
+        </div>
+        
+        <h3>VS</h3>
+
+        <div class="away">
+            <label>AWAY</label>
+            <p id="away">0</p>
+            <button id="kurang" onclick="kurangaway()">-</button>
+            <button id="tambah" onclick="tambahaway()">+</button>
+        </div>
+    </div>
+</body>
+</html>
